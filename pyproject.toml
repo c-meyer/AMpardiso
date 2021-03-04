@@ -1,0 +1,5 @@
+[build-system]
+# Minimum requirements for the build system to execute
+# This file follows PEP 518 specification
+requires = ["pip", "wheel", "setuptools", "Cython>=0.29.20"]
+build-backend = "setuptools.build_meta"
