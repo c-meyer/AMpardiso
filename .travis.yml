@@ -1,0 +1,21 @@
+dist: xenial
+
+language: python
+
+cache: pip
+
+python:
+  - "3.6"
+  - "3.7"
+  - "3.8"
+
+install:
+  - python setup.py sdist
+  - cd dist
+  - pip wheel --no-deps ampardiso-*.tar.gz
+  - pip install ampardiso-*.whl
+
+script:
+  - pytest
+
+
